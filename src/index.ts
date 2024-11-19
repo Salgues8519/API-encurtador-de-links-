@@ -13,3 +13,5 @@ app.listen(process.env.PORT, ()=>{
     console.log('Servidor Inicializado');
     
 })
+
+// TDD -> Test Driven Development => Desemvolvimento Guiado por testes
