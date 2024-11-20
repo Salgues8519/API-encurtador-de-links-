@@ -15,3 +15,27 @@ export async function adicionarDados(Link: Link){
     await fs.writeFile(caminhoBancoDeDados, JSON.stringify(dados, null, '\t'))
     
 }
+
+export async function contarVisitas(identificador:string){
+    const dados = await lerDados()
+    
+    const link= dados.find(link => {
+        return link.identificador === identificador
+    })
+
+    const linkComVisitas:Link = {
+        identificador: link!.identificador,
+        url:link!.url,
+        visitas:link!.visitas + 1
+     }
+    
+     const indece = dados.findIndex(link => {
+        return link.identificador === identificador
+    })
+
+    dados.splice(indece, 1, linkComVisitas)
+
+    await fs.writeFile(caminhoBancoDeDados, JSON.stringify(dados, null, '\t'))
+
+}
+
