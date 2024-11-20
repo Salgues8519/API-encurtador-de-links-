@@ -1,7 +1,12 @@
-[{
-    "identificador": "cubosacademy",
-    "url": "https://cubos.academy",
-    "visitas": 0
-
-}
+[
+	{
+		"identificador": "cubosacademy",
+		"url": "https://cubos.academy",
+		"visitas": 0
+	},
+	{
+		"identificador": "Guido",
+		"url": "https://guidocerqueira.com.br",
+		"visitas": 0
+	}
 ]
